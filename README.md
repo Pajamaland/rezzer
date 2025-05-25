@@ -12,4 +12,4 @@ tkinterdnd2
 `git clone https://github/Pajamaland/PyRes`  
 
 ## Usage
-Run the script with `python convert.py`, drag and drop or select your files/folders, choose your preset, and just go! That's it! Output will be labeled FILENAME_prores.mov in the same directory as the original file.
+Run the script with `python pyres.py`, drag and drop or select your files/folders, choose your preset, and just go! That's it! Output will be labeled FILENAME_prores.mov in the same directory as the original file.
