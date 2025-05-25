@@ -6,15 +6,17 @@
 ## Requirements
 Python 3  
 FFmpeg installed into your PATH  
-tkinterdnd2
+Pyside6
 
 ## Setup
 ### On Windows:
 Download the PyRes.exe binary from the Releases section. Please ensure you have Python 3, FFmpeg and tkinterdnd2 installed already.
 
 ### On Linux & Mac:
-`pip install ffmpeg`  
-`pip install tkinterdnd2`  
+> NOTE: When using pip on Linux, your distribution may not allow packages to be installed through it as it may manage Python packages externally. These instructions are "generic" and not for any specific distribution, so if you encounter an error following this method, please consult your distribution's support channels - there's some good workarounds on StackOverflow!
+
+`pip install ffmpeg`   
+`pip install pyside6`  
 `git clone https://github/Pajamaland/PyRes`  
 `python pyres.py`
 ## Usage
