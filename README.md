@@ -2,6 +2,7 @@
 A simple Python GUI utility for converting videos to ProRes 422 using FFmpeg for video editing
 
 ## Requirements
+Python 3  
 FFmpeg installed into your PATH  
 tkinterdnd2
 
