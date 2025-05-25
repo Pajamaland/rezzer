@@ -10,13 +10,13 @@ tkinterdnd2
 
 ## Setup
 ### On Windows:
-Download the PyRes.exe binary from the Releases section.
+Download the PyRes.exe binary from the Releases section. Please ensure you have Python 3, FFmpeg and tkinterdnd2 installed already.
 
 ### On Linux & Mac:
 `pip install ffmpeg`  
 `pip install tkinterdnd2`  
 `git clone https://github/Pajamaland/PyRes`  
-
+`python pyres.py`
 ## Usage
 Run the script with `python pyres.py`, drag and drop or select your files/folders, choose your preset, and just go! That's it! Output will be labeled FILENAME_prores.mov in the same directory as the original file.
 
