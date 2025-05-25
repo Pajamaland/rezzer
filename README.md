@@ -7,6 +7,10 @@ FFmpeg installed into your PATH
 tkinterdnd2
 
 ## Setup
+### On Windows:
+Download the PyRes.exe binary from the Releases section.
+
+### On Linux & Mac:
 `pip install ffmpeg`  
 `pip install tkinterdnd2`  
 `git clone https://github/Pajamaland/PyRes`  
