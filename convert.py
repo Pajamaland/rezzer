@@ -11,7 +11,7 @@ import shlex
 class FFmpegConverter:
     def __init__(self, master):
         self.master = master
-        self.master.title("FFmpeg Batch Converter - ProRes Utility")
+        self.master.title("PyRes")
         self.master.geometry("800x600")
 
         self.file_list = []
