@@ -15,10 +15,10 @@ Download the PAJAMALAND Rezzer.exe binary from the Releases section. This releas
 ### On Linux & Mac:
 > NOTE: When using pip on Linux, your distribution may not allow packages to be installed through it as it may manage Python packages externally. These instructions are "generic" and not for any specific distribution, so if you encounter an error following this method, please consult your distribution's support channels - there's some good workarounds on StackOverflow!
 
-`pip install ffmpeg`   
+`pip install ffmpeg` OR use your distribution's package manager to install ffmpeg, ie `apt install ffmpeg`   
 `pip install pyside6`  
-`git clone https://github/Pajamaland/PyRes`  
-`python rezzer.py`
+`git clone https://github/Pajamaland/rezzer`  
+`python(3) rezzer.py`
 
 ## Usage
 Run the script with `python rezzer.py`, or run PAJAMALAND Rezzer.exe on Windows, drag and drop or select your files/folders, choose your preset, and just go! That's it! Output will be labeled FILENAME_prores.mov in the same directory as the original file.
