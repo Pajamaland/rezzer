@@ -4,7 +4,7 @@
 <p align="center">If you use <b>H.264/5</b> to edit video, it's going to <b>lag like fuck.</b> Converting your files into <b>ProRes</b> should fix this (somewhat)!</p>
 
 ## Requirements
-Python 3  
+Python >= 3.13
 FFmpeg installed into your PATH  
 Pyside6
 
@@ -15,13 +15,13 @@ Download the PAJAMALAND Rezzer.exe binary from the Releases section. This releas
 ### On Linux & Mac:
 > NOTE: When using pip on Linux, your distribution may not allow packages to be installed through it as it may manage Python packages externally. These instructions are "generic" and not for any specific distribution, so if you encounter an error following this method, please consult your distribution's support channels - there's some good workarounds on StackOverflow!
 
-`pip install ffmpeg` OR use your distribution's package manager to install ffmpeg, ie `apt install ffmpeg`   
+`pip install ffmpeg` OR use your distribution's package manager to install FFmpeg, ie `apt install ffmpeg`   
 `pip install pyside6`  
 `git clone https://github/Pajamaland/rezzer`  
-`python(3) rezzer.py`
+`python3 rezzer.py`
 
 ## Usage
-Run the script with `python rezzer.py`, or run PAJAMALAND Rezzer.exe on Windows, drag and drop or select your files/folders, choose your preset, and just go! That's it! Output will be labeled FILENAME_prores.mov in the same directory as the original file.
+Drag and drop or select your files/folders, choose your preset, and just go! That's it! Output will be labeled FILENAME_prores.mov in the same directory as the original file.
 
 ## Why not just use Shutter Encoder/Media Encoder/FFmpeg CLI?
 While all these tools are great and awesome, we made PyRes because it's <b>quick and easy</b>, with just one function; <b>convert the video into ProRes.</b> Drag, click, done. PyRes is simple by design, and drastically improves workflow through its convenience. <br></br>
