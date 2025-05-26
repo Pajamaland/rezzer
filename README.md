@@ -4,7 +4,7 @@
 <p align="center">If you use <b>H.264/5</b> to edit video, it's going to <b>lag like fuck.</b> Converting your files into <b>ProRes</b> should fix this (somewhat)!</p>
 
 ## Requirements
-Python >= 3.13
+Python >= 3.13  
 FFmpeg installed into your PATH  
 Pyside6
 
