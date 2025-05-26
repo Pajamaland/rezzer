@@ -9,8 +9,17 @@ from PySide6.QtWidgets import (
     QFileDialog, QHBoxLayout, QComboBox, QProgressBar, QTextEdit, QLabel, QCheckBox
 )
 from PySide6.QtCore import Qt, QThreadPool, QRunnable, Signal, QObject
-from PySide6.QtGui import QDragEnterEvent, QDropEvent
+from PySide6.QtGui import QDragEnterEvent, QDropEvent, QIcon
 
+def resource_path(rel_path):
+    if hasattr(sys, "_MEIPASS"):
+        return os.path.join(sys._MEIPASS, rel_path)
+    return os.path.abspath(rel_path)
+
+if platform.system() == "Windows":
+    import ctypes
+    myappid = u"pajamaland.rezzer.app"  # arbitrary string
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 class WorkerSignals(QObject):
     log = Signal(str)
@@ -86,7 +95,8 @@ class DropListWidget(QListWidget):
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("PAJAMALAND Media PyRes")
+        self.setWindowTitle("PAJAMALAND Rezzer")
+        self.setWindowIcon(QIcon(resource_path("assets/icon.ico")))
         self.resize(800, 600)
         self.thread_pool = QThreadPool()
         self.files_to_process = 0
@@ -100,6 +110,10 @@ class MainWindow(QMainWindow):
         self.drop_list = DropListWidget()
         layout.addWidget(QLabel("DROP YER FILES BELOW OR CLICK 'OPEN FILES'"))
         layout.addWidget(self.drop_list)
+
+        remove_button = QPushButton("REMOVE SELECTED")
+        remove_button.clicked.connect(self.remove_selected)
+        layout.addWidget(remove_button)
 
         controls = QHBoxLayout()
         self.open_button = QPushButton("OPEN FILES")
@@ -116,11 +130,12 @@ class MainWindow(QMainWindow):
         self.threaded_box.setChecked(True)
         controls.addWidget(self.threaded_box)
 
-        self.convert_button = QPushButton("SEND IT!!!")
-        self.convert_button.clicked.connect(self.start_conversion)
-        controls.addWidget(self.convert_button)
-
         layout.addLayout(controls)
+
+        self.convert_button = QPushButton("SEND IT!!!")
+        self.convert_button.setStyleSheet("font-size: 20px; padding: 10px;")
+        self.convert_button.clicked.connect(self.start_conversion)
+        layout.addWidget(self.convert_button)
 
         self.progress = QProgressBar()
         layout.addWidget(self.progress)
@@ -138,6 +153,10 @@ class MainWindow(QMainWindow):
         files, _ = QFileDialog.getOpenFileNames(self, "SELECT VIDEO FILES")
         for f in files:
             self.drop_list.addItem(f)
+
+    def remove_selected(self):
+        for item in self.drop_list.selectedItems():
+            self.drop_list.takeItem(self.drop_list.row(item))
 
     def start_conversion(self):
         files = [self.drop_list.item(i).text() for i in range(self.drop_list.count())]
@@ -165,6 +184,7 @@ class MainWindow(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    app.setWindowIcon(QIcon(resource_path("assets/icon.ico")))
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
