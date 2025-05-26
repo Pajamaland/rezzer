@@ -2,6 +2,7 @@
 <p align="center"><img width="256" height="275" src="https://github.com/user-attachments/assets/c4af2b6a-7485-4693-a619-835023d64c84"> </p>
 <p align="center">An easy-to-use <b>Python</b> program for converting videos to <b>Apple ProRes 422</b> using <b>FFmpeg</b>, to aid the video editing process.</p>
 <p align="center">If you use <b>H.264/5</b> to edit video, it's going to <b>lag like fuck.</b> Converting your files into <b>ProRes</b> should fix this (somewhat)!</p>
+<p align="center">We developed this tool for use in-house to make the process of converting our H.264 recordings to ProRes 422 for editing quick, simple and painless.</p>
 
 ## Requirements
 Python >= 3.13  
