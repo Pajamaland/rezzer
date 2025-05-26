@@ -10,7 +10,7 @@ Pyside6
 
 ## Setup
 ### On Windows:
-Download the PyRes.exe binary from the Releases section. Please ensure you have Python 3, FFmpeg and tkinterdnd2 installed already.
+Download the PAJAMALAND Rezzer.exe binary from the Releases section. This release comes bundled with FFmpeg and PySide6, just run and go!
 
 ### On Linux & Mac:
 > NOTE: When using pip on Linux, your distribution may not allow packages to be installed through it as it may manage Python packages externally. These instructions are "generic" and not for any specific distribution, so if you encounter an error following this method, please consult your distribution's support channels - there's some good workarounds on StackOverflow!
@@ -18,9 +18,10 @@ Download the PyRes.exe binary from the Releases section. Please ensure you have 
 `pip install ffmpeg`   
 `pip install pyside6`  
 `git clone https://github/Pajamaland/PyRes`  
-`python pyres.py`
+`python rezzer.py`
+
 ## Usage
-Run the script with `python pyres.py`, drag and drop or select your files/folders, choose your preset, and just go! That's it! Output will be labeled FILENAME_prores.mov in the same directory as the original file.
+Run the script with `python rezzer.py`, or run PAJAMALAND Rezzer.exe on Windows, drag and drop or select your files/folders, choose your preset, and just go! That's it! Output will be labeled FILENAME_prores.mov in the same directory as the original file.
 
 ## Why not just use Shutter Encoder/Media Encoder/FFmpeg CLI?
 While all these tools are great and awesome, we made PyRes because it's <b>quick and easy</b>, with just one function; <b>convert the video into ProRes.</b> Drag, click, done. PyRes is simple by design, and drastically improves workflow through its convenience. <br></br>
